@@ -57,7 +57,7 @@ function! s:select_extent(extent)
     return start
 endfunction
 
-function! clang_extent_selecter#execute()
+function! clang_extent_selector#execute()
     let pos = getpos('.')
     if pos != s:context.pos
         call s:set_context(pos)
