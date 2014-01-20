@@ -8,7 +8,6 @@ function! s:prepare_temp_file()
     if -1 == writefile(map(getline(1, '$'), 'v:val =~# "^\\s*#include\\s*\\(<[^>]\\+>\\|\"[^\"]\\+\"\\)" ? "" : v:val'), temp_name)
         throw "Could not create a temporary file : ".temp_name
     endif
-    echomsg temp_name
     return temp_name
 endfunction
 
