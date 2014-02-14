@@ -3,7 +3,7 @@ Select various C and C++ block with only one mapping
 
 ![screenshot](http://gifzo.net/BAZJOHOJXsM.gif)
 
-`<Plug>(select-next-extent)` mapping selects the extent in below order.
+`<Plug>(clang-select-next-extent)` mapping selects the extent in below order.
 
 1. the most inner element at the cursor
 2. expression
@@ -13,14 +13,14 @@ Select various C and C++ block with only one mapping
 6. rotate to 1.
 
 As default mapping, `<C-t>` is provided in C and C++ source.
-If you want to assign your favorite key to `<Plug>(select-next-extent)`, please add setting like following.
+If you want to assign your favorite key to `<Plug>(clang-select-next-extent)`, please add setting like following.
 
 ```vim
 let g:clang_extent_selector_use_default_mapping = 0
 " Map to <Leader><Leader>
 augroup clang-extent-selector-mappings
     autocmd!
-    autocmd FileType c,cpp map <buffer><Leader><Leader> <Plug>(select-next-extent)
+    autocmd FileType c,cpp map <buffer><Leader><Leader> <Plug>(clang-select-next-extent)
 augroup END
 ```
 
